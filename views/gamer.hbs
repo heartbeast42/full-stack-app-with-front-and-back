@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Gamer</title>
+</head>
+<body>
+
+  <header>
+    <h1>Galvanize Games</h1>
+    <a href="/gamers">
+      <h3>Back</h3>
+    </a>
+  </header>
+
+  <main>
+    <h1>Name: {{gamer.name}}</h1>
+    <form class="" action="/gamers/{{gamer.id}}?_method=PUT" method="post">
+      <input type="text" name="name" value="{{gamer.name}}" >
+      <input type="submit" value="Rename {{gamer.name}}" >
+    </form>
+
+    <form class="" action="/gamers/{{gamer.id}}?_method=DELETE" method="post">
+      <input type="submit" value="Delete {{gamer.name}}" >
+    </form>
+    <h2>Games that {{gamer.name}} plays</h2>
+
+    {{#each playerGames}}
+
+      <h3>{{title}} For: {{platform}}</h3>
+
+      <form action="/gamers/delete-game/{{game_id}}/{{gamer_id}}?_method=DELETE" method="post">
+        <button>Delete {{title}}</button>
+      </form>
+
+    {{/each}}
+
+    <form action="/gamers/add-game/{{gamer.id}}" method="post">
+      <select name="game">
+        {{#each game}}
+          <option value="{{id}}">
+            {{title}} For: {{platform}}
+          </option>
+        {{/each}}
+      </select>
+      <button>Add a Game that {{gamer.name}} plays</button>
+    </form>
+
+  </main>
+</body>
+</html>

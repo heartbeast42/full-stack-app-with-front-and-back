@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Gamers</title>
+</head>
+<body>
+
+  <header>
+    <h1>Galvanize Games</h1>
+    <a href="/">
+      <h3>Back</h3>
+    </a>
+  </header>
+
+  <main>
+
+    {{#each gamers}}
+      <a href="/gamers/{{id}}">
+        <h3>Name: {{name}}</h3>
+      </a>
+    {{/each}}
+
+    <form action="/gamers" method="post">
+      <label for="addgame">Name: </label>
+      <input type="text" id="addgame" name="name" value="cMonster 3d">
+      <button>Add Gamer</button>
+    </form>
+
+  </main>
+
+</body>
+</html>

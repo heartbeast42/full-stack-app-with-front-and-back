@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Games</title>
+</head>
+<body>
+
+  <header>
+    <h1>Galvanize Games</h1>
+    <a href="/">
+      <h3>Back</h3>
+    </a>
+  </header>
+
+  <main>
+
+    {{#each games}}
+      <a href="/games/{{id}}">
+        <h3>Title: {{title}} Platform: {{platform}}</h3>
+      </a>
+    {{/each}}
+
+    <form class="" action="/games" method="post">
+      <label for="addgame">Title: </label>
+      <input type="text" id="addgame" name="title" value="Kingdom Hearts">
+      <label for="addplatform">Platform: </label>
+      <input type="text" id="addplatform" name="platform" value="ps2">
+      <button>Add Game</button>
+    </form>
+
+  </main>
+
+</body>
+</html>

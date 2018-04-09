@@ -1,0 +1,30 @@
+{
+  "name": "2017_11_16_galvanize-games-scrimmage",
+  "version": "1.0.0",
+  "description": "Welcome to Galvanize Games. Galvanize is pivoting once again and is getting into the video games industry. We aren't going to be making games, but rather tracking what games each gamer is playing. As such we need you to write a web app.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClarkWalker/galvanize-games-scrimmage.git"
+  },
+  "keywords": [],
+  "author": "Clark Walker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ClarkWalker/galvanize-games-scrimmage/issues"
+  },
+  "homepage": "https://github.com/ClarkWalker/galvanize-games-scrimmage#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "hbs": "^4.0.1",
+    "knex": "^0.14.0",
+    "method-override": "^2.3.10",
+    "nodemon": "^1.12.1",
+    "pg": "^7.4.0"
+  }
+}

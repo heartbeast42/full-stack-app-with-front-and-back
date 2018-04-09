@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Games</title>
+</head>
+<body>
+
+  <header>
+    <h1>Galvanize Games</h1>
+    <a href="/games">
+      <h3>Back</h3>
+    </a>
+  </header>
+
+  <main>
+    <h1>{{game.title}}</h1>
+    <form class="" action="/games/{{game.id}}?_method=PUT" method="post">
+      <input type="text" name="title" value="{{game.title}}" >
+      <input type="text" name="platform" value="{{game.platform}}" >
+      <input type="submit" value="Update {{title}}" >
+    </form>
+
+    <form class="" action="/games/{{game.id}}?_method=DELETE" method="post">
+      <input type="submit" value="Delete {{title}}" >
+    </form>
+  </main>
+
+</body>
+</html>
